@@ -1,0 +1,32 @@
+<div class="main">
+  <div class="mainLeft">
+    <!-- 指数选择 -->
+    <div class="zhishu">
+      <div class="zhishuList" [style]="zhishuListPosition">
+        <!-- 控制移动位置 -->
+        <div class="zhishuItem" *ngFor="let item of quoteList" [class]={fushu:item.quote.percent<0}>
+          <!-- 改变负数颜色 -->
+          <div class="zhishuItemLeft">
+            <h3>{{item.quote.name}}</h3>
+            <div>{{item.quote.current}}</div>
+            <p>{{item.quote.chg}}({{item.quote.percent}}%)</p>
+          </div>
+          <div class="svg">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 140px; height: 57.4px;">
+              <path class="StockSlider_last-close_3k-" d="M0 35 L140 35"></path>
+              <path class="StockSlider_polyline_YMO"
+                d="M0 7 L0 7 L0 6 L1 6 L1 8 L2 6 L2 10 L2 11 L3 14 L3 14 L4 13 L4 15 L5 14 L5 13 L5 14 L6 14 L6 14 L7 14 L7 14 L8 13 L8 14 L8 12 L9 11 L9 9 L10 10 L10 10 L10 11 L11 12 L11 14 L12 13 L12 11 L13 11 L13 9 L13 7 L14 6 L14 5 L15 6 L15 7 L16 6 L16 7 L16 6 L17 7 L17 7 L18 8 L18 8 L18 8 L19 9 L19 9 L20 11 L20 11 L21 12 L21 11 L21 11 L22 12 L22 11 L23 11 L23 12 L24 11 L24 11 L24 11 L25 10 L25 9 L26 10 L26 8 L26 8 L27 11 L27 12 L28 12 L28 11 L29 12 L29 12 L29 12 L30 13 L30 13 L31 13 L31 14 L32 15 L32 14 L32 16 L33 14 L33 13 L34 13 L34 14 L35 14 L35 15 L35 15 L36 16 L36 16 L37 17 L37 16 L37 16 L38 17 L38 16 L39 16 L39 16 L40 17 L40 16 L40 15 L41 15 L41 16 L42 17 L42 16 L43 17 L43 16 L43 16 L44 16 L44 16 L45 17 L45 17 L45 18 L46 17 L46 16 L47 16 L47 16 L48 15 L48 15 L48 14 L49 15 L49 15 L50 15 L50 15 L51 16 L51 16 L51 16 L52 16 L52 16 L53 16 L53 18 L53 19 L54 17 L54 19 L55 18 L55 18 L56 18 L56 19 L56 19 L57 20 L57 20 L58 20 L58 20 L59 20 L59 20 L59 21 L60 21 L60 20 L61 20 L61 20 L61 20 L62 20 L62 20 L63 20 L63 19 L64 18 L64 17 L64 18 L65 18 L65 20 L66 19 L66 17 L67 19 L67 18 L67 19 L68 20 L68 21 L69 20 L69 19 L70 19 L70 18 L70 17 L71 17 L71 17 L72 16 L72 15 L72 15 L73 15 L73 15 L74 15 L74 15 L75 15 L75 16 L75 16 L76 16 L76 16 L77 16 L77 17 L78 17 L78 18 L78 18 L79 18 L79 18 L80 19 L80 19 L80 20 L81 21 L81 21 L82 23 L82 22 L83 22 L83 22 L83 23 L84 25 L84 26 L85 26 L85 26 L86 26 L86 28 L86 28 L87 27 L87 28 L88 28 L88 29 L88 28 L89 27 L89 26 L90 26 L90 25 L91 25 L91 25 L91 24 L92 25 L92 25 L93 26 L93 28 L94 28 L94 27 L94 27 L95 27 L95 28 L96 29 L96 31 L96 31 L97 31 L97 31 L98 31 L98 31 L99 32 L99 31 L99 30 L100 30 L100 29 L101 28 L101 27 L102 26 L102 26 L102 25">
+              </path>
+              <circle class="StockSlider_breathingLight_3M6" r="5" cx="102" cy="25"></circle>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="circleList">
+        <div class="circle" (click)="toggleZhishu(0)"></div>
+        <div class="circle" (click)="toggleZhishu(1)"></div>
+        <div class="circle" (click)="toggleZhishu(2)"></div>
+      </div>
+    </div>
+  </div>
+</div>

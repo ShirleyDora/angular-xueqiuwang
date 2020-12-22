@@ -1,0 +1,23 @@
+<!-- 头部 -->
+<div class="header">
+  <!-- 导航 -->
+  <div class="nav">
+    <!-- 导航logo -->
+    <div class="logo">
+      <img src="./assets/img/xueqiulogo.png" alt="">
+    </div>
+    <!-- 导航列表 -->
+    <div class="navList">
+      <div class="navItem" [class]="{activeNav:activeDom===1}"  (click)="addActive(1)" [routerLink]="['/']"  >首页</div>
+      <div class="navItem" [class]="{activeNav:activeDom===2}" (click)="addActive(2)" [routerLink]="['/screener']"  >股票筛选</div>
+      <div class="navItem" [class]="{activeNav:activeDom===3}" (click)="addActive(3)" [routerLink]="['/newstock']"  >新股上市</div>
+    </div>
+    <!-- 搜索框 -->
+    <div class="search">
+      <input placeholder="请输入你想要的搜索的内容" type="text">
+      <span class="searchIcon"></span>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

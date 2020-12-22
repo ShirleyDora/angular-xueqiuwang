@@ -1,0 +1,65 @@
+.header {
+  min-width: 960px; //pc端最小宽度
+  height: 58px;
+  background-color: #1369bf;
+  color: #fff;
+
+  .nav {
+    width: 960px;
+    display: flex;
+    height: 58px;
+    margin: 0 auto; //水平居中
+    justify-content: space-between; //水平分布
+    align-items: center; //侧轴居中
+
+    .logo img {
+      height: 25px;
+      width: auto;
+    }
+
+    .navList {
+      display: flex;
+      font-size: 10px;
+
+      .navItem {
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center; //文本居中
+      }
+
+      .navItem:focus {
+        outline: none;
+      }
+
+      .activeNav {
+        border-bottom: 2px solid #fff;//点击后下划线样式
+      }
+    }
+
+    .search {
+      width: 300px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 15px;
+      padding: 0 15px;
+      background-color: #fff;
+      display: flex;
+
+      input {
+        border: none;
+        outline: none;
+        width: 270px;
+      }
+
+      .searchIcon {
+        width: 30px;
+        height: 30px;
+        background-image: url('../assets/img/search.png');
+        background-size: 80% 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
